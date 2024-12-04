@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingénieur Informatique - Page 1</title>
+    <style>
+        /* Style global */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #111;
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            color: #00d1ff;  /* Bleu LED */
+        }
+
+        p {
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 20px 0;
+            color: #ddd;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Animation Header */
+        #header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #ff3e00, #00d1ff); /* Dégradé bleu-rouge LED */
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 3s ease-out;
+        }
+
+        #header h1 {
+            font-size: 4rem;
+            letter-spacing: 10px;
+            animation: slideIn 3s ease-out;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            animation: fadeIn 2.5s ease-out;
+        }
+
+        /* Styles des sections avec rectangles mobiles */
+        .section {
+            padding: 50px;
+            margin: 20px auto;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 800px;
+            cursor: pointer;
+            position: relative;
+            background-color: #222;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeUp 1s ease-out forwards, moveRect 3s ease-in-out infinite alternate;
+        }
+
+        .section:hover {
+            transform: scale(1.05);
+            background-color: #444;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #00d1ff;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Animation pour déplacer le rectangle */
+        @keyframes moveRect {
+            0% {
+                transform: translateX(-50px);
+            }
+            100% {
+                transform: translateX(50px);
+            }
+        }
+
+        /* Animation de l'explosion */
+        @keyframes explode {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(0);
+                opacity: 0;
+            }
+        }
+
+        /* Animation de fondu et montée */
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animations des boutons et interactions */
+        button {
+            padding: 15px;
+            background-color: #00d1ff;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff3e00; /* Rouge LED */
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section {
+                width: 100%;
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header avec Animation -->
+    <section id="header">
+        <div>
+            <h1>Ingénieur Informatique</h1>
+            <p class="subtitle">Découvrez le parcours, les compétences et les opportunités offertes par ce métier passionnant.</p>
+        </div>
+    </section>
+
+    <!-- Section Finances -->
+    <section id="finance" class="section" onclick="explodeAndRedirect('finance.html')">
+        <h2>Les Finances du Métier</h2>
+        <p>Le salaire moyen d'un ingénieur informatique varie entre 30 000 € et 50 000 € par an en fonction de l'expérience et de la spécialisation. Les ingénieurs informatiques dans les grandes entreprises ou les startups technologiques peuvent voir leur rémunération atteindre 70 000 € ou plus.</p>
+    </section>
+
+    <!-- Section Études nécessaires -->
+    <section id="etudes" class="section" onclick="explodeAndRedirect('etudes.html')">
+        <h2>Études nécessaires</h2>
+        <p>Pour devenir ingénieur informatique, il est souvent nécessaire d'obtenir un diplôme d'ingénieur, généralement un Bac +5. Les écoles d'ingénieurs ou les formations universitaires spécialisées en informatique sont les parcours les plus courants. Des connaissances solides en mathématiques, en logique et en algorithmie sont essentielles pour réussir dans ce domaine.</p>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="about" class="section" onclick="explodeAndRedirect('apropos.html')">
+        <h2>À propos du Métier</h2>
+        <p>Un ingénieur informatique est un expert dans la conception, le développement et la gestion de systèmes informatiques. Il peut travailler dans des domaines variés comme le développement de logiciels, la cybersécurité, l'intelligence artificielle, ou encore la gestion des infrastructures réseaux.</p>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences" class="section" onclick="explodeAndRedirect('competences.html')">
+        <h2>Compétences Clés</h2>
+        <p>Un ingénieur informatique doit maîtriser plusieurs compétences clés comme les langages de programmation, la gestion des bases de données et des réseaux, ainsi que l'algorithmie et la résolution de problèmes complexes.</p>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section" onclick="explodeAndRedirect('contact.html')">
+        <h2>Contactez-moi</h2>
+        <p>Vous avez des questions ou souhaitez en savoir plus ? N'hésitez pas à me contacter.</p>
+    </section>
+
+    <!-- Script JavaScript pour l'explosion et la redirection -->
+    <script>
+        function explodeAndRedirect(url) {
+            let section = event.currentTarget;
+            
+            // Ajouter l'animation d'explosion
+            section.style.animation = 'explode 0.5s ease-out forwards';
+
+            // Attendre que l'animation se termine avant la redirection
+            setTimeout(function() {
+                window.location.href = url;
+            }, 500); // Attendre 500ms pour que l'animation soit terminée
+        }
+    </script>
+
+</body>
+</html>

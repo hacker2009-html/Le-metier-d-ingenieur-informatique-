@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences d'un Ingénieur Informatique</title>
+    <style>
+        /* Style global */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #111;
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #00d1ff;  /* Bleu LED */
+        }
+
+        .section {
+            padding: 50px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            background-color: #222;
+            border-radius: 20px;
+            transform: translateY(50px);
+            opacity: 0;
+            animation: fadeUp 1s ease-out forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition ajoutée */
+        }
+
+        .section:hover {
+            transform: translateY(0) scale(1.05); /* Agrandissement au survol */
+            box-shadow: 0 8px 15px rgba(0, 209, 255, 0.5); /* Ombre au survol */
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #ddd;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <h1>Compétences d'un Ingénieur Informatique</h1>
+    </section>
+
+    <section class="section">
+        <h2>Compétences Techniques</h2>
+        <p>Les ingénieurs informatiques doivent maîtriser plusieurs compétences techniques, telles que :</p>
+        <ul>
+            <li>Langages de programmation (C, Java, Python, etc.)</li>
+            <li>Gestion de bases de données (SQL, NoSQL)</li>
+            <li>Architecture des systèmes d'information et des réseaux</li>
+            <li>Cybersécurité et cryptographie</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Compétences Non Techniques</h2>
+        <p>Les compétences non techniques sont également essentielles pour réussir dans ce métier :</p>
+        <ul>
+            <li>Résolution de problèmes complexes</li>
+            <li>Capacité à travailler en équipe et en collaboration</li>
+            <li>Adaptabilité et apprentissage continu</li>
+            <li>Compétences en communication</li>
+        </ul>
+    </section>
+
+</body>
+</html>

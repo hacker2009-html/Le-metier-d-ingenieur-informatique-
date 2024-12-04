@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Finances du Métier - Ingénieur Informatique</title>
+    <style>
+        /* Style global */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #111;
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #00d1ff;  /* Bleu LED */
+        }
+
+        .section {
+            padding: 50px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            background-color: #222;
+            border-radius: 20px;
+            transform: translateY(50px);
+            opacity: 0;
+            animation: fadeUp 1s ease-out forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition ajoutée */
+        }
+
+        .section:hover {
+            transform: translateY(0) scale(1.05); /* Agrandissement au survol */
+            box-shadow: 0 8px 15px rgba(0, 209, 255, 0.5); /* Ombre au survol */
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #ddd;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <h1>Les Finances du Métier</h1>
+    </section>
+
+    <section class="section">
+        <h2>Salaire Moyen d'un Ingénieur Informatique</h2>
+        <p>Le salaire moyen d'un ingénieur informatique dépend de plusieurs facteurs, notamment l'expérience, les compétences spécifiques, et l'industrie dans laquelle il travaille. Voici un aperçu général :</p>
+        <ul>
+            <li><strong>Débutant (0-2 ans d'expérience)</strong>: Entre 30 000 € et 40 000 € par an.</li>
+            <li><strong>Expérimenté (2-5 ans)</strong>: Entre 40 000 € et 55 000 € par an.</li>
+            <li><strong>Senior (5+ ans)</strong>: Entre 55 000 € et 70 000 € par an.</li>
+            <li><strong>Freelance / Indépendant</strong>: Peut dépasser 80 000 € par an en fonction des projets et clients.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Évolutions Salariales et Avantages</h2>
+        <p>Les ingénieurs informatiques bénéficient souvent de primes, de bonus ou de stock-options, surtout s'ils travaillent dans des entreprises en forte croissance comme les startups ou les géants de la tech. De plus, les avantages incluent des régimes de retraite, des assurances santé et des congés payés prolongés.</p>
+    </section>
+
+</body>
+</html>

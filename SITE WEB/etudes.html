@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Études Nécessaires - Ingénieur Informatique</title>
+    <style>
+        /* Style global */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #111;
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #00d1ff;  /* Bleu LED */
+        }
+
+        .section {
+            padding: 50px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            background-color: #222;
+            border-radius: 20px;
+            transform: translateY(50px);
+            opacity: 0;
+            animation: fadeUp 1s ease-out forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition ajoutée */
+        }
+
+        .section:hover {
+            transform: translateY(0) scale(1.05); /* Agrandissement au survol */
+            box-shadow: 0 8px 15px rgba(0, 209, 255, 0.5); /* Ombre au survol */
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #ddd;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <h1>Études Nécessaires pour Devenir Ingénieur Informatique</h1>
+    </section>
+
+    <section class="section">
+        <h2>Le Parcours Scolaire Typique</h2>
+        <p>Le parcours pour devenir ingénieur informatique est généralement structuré comme suit :</p>
+        <ul>
+            <li><strong>Bac S (option Mathématiques ou Science de l'Ingénieur)</strong>: Cette formation est essentielle pour acquérir des bases solides en mathématiques et en sciences physiques.</li>
+            <li><strong>Licence en Informatique (Bac +3)</strong>: Ce niveau fournit des connaissances approfondies en programmation, réseaux et systèmes d'exploitation.</li>
+            <li><strong>Master en Informatique (Bac +5)</strong>: La dernière étape qui permet de se spécialiser dans des domaines comme la cybersécurité, l'intelligence artificielle, ou les systèmes embarqués.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Les Formations Complémentaires</h2>
+        <p>Les ingénieurs peuvent également poursuivre des formations complémentaires en fonction de leurs intérêts. Les domaines populaires incluent :</p>
+        <ul>
+            <li>Data Science et Big Data</li>
+            <li>Cybersécurité et Cryptographie</li>
+            <li>Développement Mobile et Web</li>
+            <li>Intelligence Artificielle et Machine Learning</li>
+        </ul>
+    </section>
+
+</body>
+</html>

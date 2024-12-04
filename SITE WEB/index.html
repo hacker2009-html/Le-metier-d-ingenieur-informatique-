@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Métier d'Ingénieur Informatique</title>
+    <style>
+        /* Style global */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0e0e0e;
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #00d1ff;  /* Bleu LED */
+        }
+
+        p {
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Animation Header */
+        #main-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #ff3e00, #00d1ff); /* Dégradé bleu-rouge LED */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .title-container {
+            animation: fadeIn 2s ease-out;
+        }
+
+        #title {
+            font-size: 4rem;
+            letter-spacing: 10px;
+            animation: slideIn 2s ease-out;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            animation: fadeIn 2.5s ease-out;
+        }
+
+        /* Section Introduction */
+        .animated-section {
+            padding: 50px 0;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeUp 1s ease-out forwards;
+        }
+
+        .animated-section:nth-child(odd) {
+            background-color: #1d1d1d;
+        }
+
+        /* Section Compétences sans images */
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .skill {
+            text-align: center;
+            width: 150px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #2a2a2a;
+            transition: transform 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+        }
+
+        .skill:hover {
+            transform: scale(1.1);
+            border-color: #ff3e00; /* Bordure rouge LED lors du survol */
+        }
+
+        /* Bouton animé */
+        .button-container {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .animated-button {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+            background-color: #00d1ff; /* Bleu LED */
+            border: 2px solid #00d1ff;
+            border-radius: 50px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .animated-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background-color: #ff3e00; /* Rouge LED */
+            transition: all 0.3s ease;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+
+        .animated-button:hover::before {
+            width: 0;
+            height: 0;
+        }
+
+        .animated-button:hover {
+            color: #ff3e00; /* Changer la couleur du texte en rouge LED */
+            border-color: #ff3e00;
+            box-shadow: 0 0 20px rgba(255, 62, 0, 0.8);
+        }
+
+        /* Footer sans icônes */
+        #footer {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            animation: slideUp 1.5s ease-out;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .social-link {
+            color: #00d1ff;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .social-link:hover {
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 10px #ff3e00); /* Effet LED rouge sur les liens sociaux */
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header avec Animation -->
+    <header id="main-header">
+        <div class="title-container">
+            <h1 id="title">Le Métier d'Ingénieur Informatique</h1>
+            <p class="subtitle">Une carrière en constante évolution, à la frontière de l'innovation.</p>
+        </div>
+    </header>
+
+    <!-- Section Introduction -->
+    <section id="introduction" class="animated-section">
+        <div class="content">
+            <h2>Qu'est-ce qu'un Ingénieur Informatique ?</h2>
+            <p>Un ingénieur informatique est un professionnel qui conçoit, développe et optimise des systèmes informatiques. Il travaille à la création de logiciels, d'applications, et à la gestion de l'architecture des réseaux informatiques.</p>
+        </div>
+    </section>
+
+    <!-- Section Compétences sans images -->
+    <section id="competences" class="animated-section">
+        <h2>Compétences Clés</h2>
+        <div class="skills-container">
+            <div class="skill" id="skill1">
+                <p>Développement logiciel</p>
+            </div>
+            <div class="skill" id="skill2">
+                <p>Architecture Réseau</p>
+            </div>
+            <div class="skill" id="skill3">
+                <p>Gestion des bases de données</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bouton animé (redirection vers page1.html) -->
+    <div class="button-container">
+        <a href="page1.html" class="animated-button">Aller à la Page 1</a>
+    </div>
+
+    <!-- Footer sans icônes -->
+    <footer id="footer">
+        <div class="social-links">
+            <a href="https://www.linkedin.com" target="_blank" class="social-link">LinkedIn</a>
+            <a href="https://github.com" target="_blank" class="social-link">GitHub</a>
+        </div>
+    </footer>
+
+    <!-- JS pour Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('.animated-section');
+            
+            // Déclenche l'animation de chaque section au défilement
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in-visible');
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
